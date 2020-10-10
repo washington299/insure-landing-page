@@ -27,9 +27,47 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    font-family: var(--font-family-dm-serif);
+    font-family: var(--font-family-karla);
+}
+.header__menu {
+    display: flex;
+    flex-direction: column;
 }
 .header__icon-hamburger {
     cursor: pointer;
 }
-.header__menu {}
+.header__list,
+.header__item {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.header__list {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 80px);
+    top: 80px;
+    left: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--font-smooth-weight);
+    background-color: var(--neutral-color1);
+    color: var(--neutral-color3);
+}
+.header__item {
+    padding: 15px;
+    margin: 5px 20px;
+    cursor: pointer;
+}
+.header__item--border {
+    border: 2px solid var(--neutral-color3);
+}
+.header__bg-pattern-mob-nav {
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
