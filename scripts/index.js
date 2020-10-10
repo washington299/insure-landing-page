@@ -1,4 +1,4 @@
-const menu = document.querySelector('.header__menu-hamburger');
+const menu = document.querySelector('.header__icon-hamburger');
 menu.onclick = function() {
     const menu_src = menu.getAttribute('src');
 

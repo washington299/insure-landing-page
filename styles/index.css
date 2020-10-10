@@ -29,7 +29,7 @@ body {
     padding: 0 20px;
     font-family: var(--font-family-dm-serif);
 }
-.header__logo {}
-.header__menu-hamburger {
+.header__icon-hamburger {
     cursor: pointer;
 }
+.header__menu {}
