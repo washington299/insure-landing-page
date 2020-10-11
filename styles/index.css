@@ -29,20 +29,20 @@ body {
     padding: 0 20px;
     font-family: var(--font-family-karla);
 }
-.header__menu {
+.header__menu-mobile {
     display: flex;
     flex-direction: column;
 }
 .header__icon-hamburger {
     cursor: pointer;
 }
-.header__list,
-.header__item {
+.header__list-mob,
+.header__item-mob {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.header__list {
+.header__list-mob {
     display: none;
     flex-direction: column;
     width: 100%;
@@ -56,18 +56,69 @@ body {
     background-color: var(--neutral-color1);
     color: var(--neutral-color3);
 }
-.header__item {
+.header__item-mob {
     padding: 15px;
     margin: 5px 20px;
     cursor: pointer;
 }
-.header__item--border {
+.header__item-mob--border {
     border: 2px solid var(--neutral-color3);
 }
-.header__bg-pattern-mob-nav {
+.header__bg-pattern-mob-nav-mob {
     width: 100%;
+    height: 40%;
     left: 0;
     right: 0;
     bottom: 0;
     position: absolute;
+}
+
+.header__menu-desktop {
+    display: none;
+}
+.header__list-desktop,
+.header__item-desktop {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.header__list-desktop {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.header__item-desktop {
+    padding: 15px;
+    color: var(--neutral-color2);
+    font-weight: var(--font-bold-weight);
+    cursor: pointer;
+}
+.header__item-desktop:hover {
+    color: var(--neutral-color1);
+    transition: all ease 0.5s;
+}
+.header__item-desktop--border {
+    padding: 10px 30px;
+    color: var(--neutral-color1);
+    border: 2px solid var(--neutral-color1);
+    font-weight: var(--font-bold-weight);
+}
+.header__item-desktop--border:hover {
+    background-color: var(--neutral-color1);
+    color: var(--neutral-color3);
+    transition: all ease 0.5s;
+}
+
+@media only screen and (min-width: 640px) {
+    .header {
+        max-width: 1080px;
+        margin: auto;
+    }
+    .header__menu-mobile {
+        display: none;
+    }
+    .header__menu-desktop {
+        display: flex;
+    }
 }
