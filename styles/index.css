@@ -24,9 +24,11 @@ body {
 /* global classes */
 .button {
     border: 2px solid;
-    padding: 10px 25px;
+    padding: 10px 30px;
     cursor: pointer;
     transition: all ease 0.3s;
+    text-transform: uppercase;
+    font-family: var(--font-family-karla);
 }
 .button--white {
     border-color: var(--neutral-color1);
@@ -137,6 +139,9 @@ body {
     font-family: var(--font-family-karla);
     line-height: 23px;
     text-align: center;
+}
+.banner__button {
+    margin-top: 25px;
 }
 
 @media screen and (min-width: 640px) {
