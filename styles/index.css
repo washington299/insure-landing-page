@@ -108,6 +108,7 @@ body {
 .banner {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .banner__image {
     width: 100%;
@@ -116,6 +117,11 @@ body {
     position: absolute;
     left: 0;
     top: 0;
+}
+.banner__bg-pattern-right-mob {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 .banner__content {
     background-color: var(--primary-color1);
@@ -142,6 +148,10 @@ body {
 }
 .banner__button {
     margin-top: 25px;
+}
+.banner__white-area {
+    height: 200px;
+    background-color: #FFF;
 }
 
 @media screen and (min-width: 640px) {
