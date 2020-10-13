@@ -17,8 +17,10 @@ menu.onclick = function() {
     if (menu_src === 'images/icon-hamburger.svg') {
         menu.setAttribute('src', 'images/icon-close.svg');
         menu_mobile.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
     } else {
         menu.setAttribute('src', 'images/icon-hamburger.svg');
         menu_mobile.style.display = 'none';
+        document.body.style.overflow = 'auto';
     }
 };
