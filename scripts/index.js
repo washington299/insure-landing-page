@@ -1,3 +1,14 @@
+const screenWidth = window.innerWidth;
+const headerButton = document.getElementById('header-button');
+
+if (screenWidth < 641) {
+    headerButton.classList.remove('button--white');
+    headerButton.classList.add('button--black');
+} else {
+    headerButton.classList.remove('button--black');
+    headerButton.classList.add('button--white');
+}
+
 const menu = document.querySelector('.header__icon-hamburger');
 menu.onclick = function() {
     const menu_src = menu.getAttribute('src');

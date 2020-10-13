@@ -21,6 +21,34 @@ body {
     font-size: 16px;
 }
 
+/* global classes */
+.button {
+    border: 2px solid;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.button--white {
+    border-color: var(--neutral-color1);
+    color: var(--neutral-color1);
+}
+.button--white:hover {
+    background-color: var(--neutral-color1);
+    color: var(--neutral-color3);
+}
+.button--black {
+    border-color: var(--neutral-color3);
+    color: var(--neutral-color3);
+}
+.button--black:hover {
+    border-color: var(--neutral-color1);
+    background-color: var(--neutral-color3);
+    color: var(--neutral-color1);
+}
+
+
+/* elements classes */
+
 .header {
     height: 80px;
     display: flex;
@@ -55,22 +83,60 @@ body {
     font-weight: var(--font-smooth-weight);
     background-color: var(--neutral-color1);
     color: var(--neutral-color3);
+    z-index: 99;
 }
 .header__item-mob {
     padding: 15px;
     margin: 5px 20px;
     cursor: pointer;
+    transition: all ease 0.3s;
 }
 .header__item-mob--border {
     border: 2px solid var(--neutral-color3);
 }
-.header__bg-pattern-mob-nav-mob {
+.header__bg-pattern-nav-mob {
     width: 100%;
     height: 40%;
     left: 0;
     right: 0;
     bottom: 0;
     position: absolute;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+}
+.banner__image {
+    width: 100%;
+}
+.banner__bg-pattern-left-mob {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.banner__content {
+    background-color: var(--primary-color1);
+    color: var(--neutral-color3);
+    position: relative;
+}
+.banner__text-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px;
+}
+.banner__title {
+    margin: 0;
+    text-align: center;
+    font-size: 46px;
+    z-index: 1;
+}
+.banner__description {
+    color: var(--neutral-color3);
+    font-family: var(--font-family-karla);
+    line-height: 23px;
+    text-align: center;
 }
 
 @media screen and (min-width: 640px) {
@@ -110,7 +176,7 @@ body {
         background-color: var(--neutral-color1);
         color: var(--neutral-color3);
     }
-    .header__bg-pattern-mob-nav-mob {
+    .header__bg-pattern-nav-mob {
         display: none;
     }
 }
