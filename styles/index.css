@@ -65,20 +65,20 @@ body {
     height: 100%;
     padding: 0 20px;
 }
-.header__menu-mobile {
+.header__menu {
     display: flex;
     flex-direction: column;
 }
 .header__icon-hamburger {
     cursor: pointer;
 }
-.header__list-mob,
-.header__item-mob {
+.header__list,
+.header__item {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-.header__list-mob {
+.header__list {
     display: none;
     flex-direction: column;
     width: 100%;
@@ -93,13 +93,13 @@ body {
     color: var(--neutral-color3);
     z-index: 99;
 }
-.header__item-mob {
+.header__item {
     padding: 15px;
     margin: 5px 20px;
     cursor: pointer;
     transition: all ease 0.3s;
 }
-.header__item-mob--border {
+.header__item-mob {
     border: 2px solid var(--neutral-color3);
 }
 .header__bg-pattern-nav-mob {
@@ -183,6 +183,13 @@ body {
     height: 180px;
     background-color: #FFF;
 }
+.white-area__content {
+    display: none;
+    width: 100%;
+    max-width: 1080px;
+    margin: auto;
+    padding: 20px;
+}
 .banner__line {
     width: 150px;
     height: 2px;
@@ -192,13 +199,13 @@ body {
 }
 
 @media screen and (min-width: 640px) {
-    .header__menu-mobile {
+    .header__menu {
         flex-direction: row;
     }
     .header__icon-hamburger {
         display: none;
     }
-    .header__list-mob {
+    .header__list {
         display: flex !important;
         flex-direction: row;
         align-items: center;
@@ -208,19 +215,19 @@ body {
         background-color: #FFF;
         color: var(--neutral-color1);
     }
-    .header__item-mob {
+    .header__item {
         margin: 0;
         color: var(--neutral-color2);
         transition: all ease 0.5s;
     }
-    .header__item-mob:hover {
+    .header__item:hover {
         color: var(--neutral-color1);
     }
-    .header__item-mob--border {
+    .header__item-mob {
         border: 2px solid var(--neutral-color1);
         padding: 10px 25px;
     }
-    .header__item-mob--border:hover {
+    .header__item-mob:hover {
         background-color: var(--neutral-color1);
         color: var(--neutral-color3);
     }
@@ -250,6 +257,15 @@ body {
         flex: 1;
         padding-left: 0;
         padding-right: 10px;
+    }
+    .banner__white-area {
+        height: 300px;
+    }
+    .white-area__content {
+        display: flex;
+    }
+    .banner__line {
+        text-align: left;
     }
 }
 

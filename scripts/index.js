@@ -1,18 +1,9 @@
 const screenWidth = window.innerWidth;
-const headerButton = document.getElementById('header-button');
-
-if (screenWidth < 641) {
-    headerButton.classList.remove('button--white');
-    headerButton.classList.add('button--black');
-} else {
-    headerButton.classList.remove('button--black');
-    headerButton.classList.add('button--white');
-}
-
 const menu = document.querySelector('.header__icon-hamburger');
+
 menu.onclick = function() {
     const menu_src = menu.getAttribute('src');
-    const menu_mobile = document.querySelector('.header__list-mob');
+    const menu_mobile = document.querySelector('.header__list');
 
     if (menu_src === 'images/icon-hamburger.svg') {
         menu.setAttribute('src', 'images/icon-close.svg');
