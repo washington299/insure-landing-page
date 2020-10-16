@@ -22,6 +22,10 @@ body {
 }
 
 /* global classes */
+.container {
+    max-width: 1080px;
+    margin: auto;
+}
 .button {
     border: 2px solid;
     padding: 10px 30px;
@@ -50,14 +54,16 @@ body {
 
 
 /* elements classes */
-
 .header {
     height: 80px;
+    font-family: var(--font-family-karla);
+}
+.container__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
     padding: 0 20px;
-    font-family: var(--font-family-karla);
 }
 .header__menu-mobile {
     display: flex;
@@ -109,8 +115,6 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-}
-.banner__image {
     width: 100%;
 }
 .banner__bg-pattern-left-mob {
@@ -118,21 +122,44 @@ body {
     left: 0;
     top: 0;
 }
+.banner__bg-pattern-left-desktop {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 1;
+}
 .banner__bg-pattern-right-mob {
     position: absolute;
     right: 0;
     bottom: 0;
 }
-.banner__content {
+.banner__bg-pattern-right-desktop {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+.banner__background {
+    width: 100%;
     background-color: var(--primary-color1);
     color: var(--neutral-color3);
     position: relative;
+}
+.banner__content {
+    display: flex;
+    flex-direction: column;
+}
+.banner__img {
+    width: 100%;
 }
 .banner__text-area {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 20px;
+    position: relative;
 }
 .banner__title {
     margin: 0;
@@ -153,7 +180,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 180px;
     background-color: #FFF;
 }
 .banner__line {
@@ -165,10 +192,6 @@ body {
 }
 
 @media screen and (min-width: 640px) {
-    .header {
-        max-width: 1080px;
-        margin: auto;
-    }
     .header__menu-mobile {
         flex-direction: row;
     }
@@ -203,5 +226,36 @@ body {
     }
     .header__bg-pattern-nav-mob {
         display: none;
+    }
+
+    .banner__content {
+        flex-direction: row-reverse;
+        align-items: center;
+        max-width: 1080px;
+        margin: auto;
+        padding: 20px;
+    }
+    .banner__bg-pattern-left-mob,
+    .banner__bg-pattern-right-mob {
+        display: none;
+    }
+    .banner__bg-pattern-left-desktop,
+    .banner__bg-pattern-right-desktop {
+        display: block;
+    }
+    .banner__image-area {
+        flex: 1;
+    }
+    .banner__text-area {
+        flex: 1;
+        padding-left: 0;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .banner__image-area {
+        position: relative;
+        top: 80px;
     }
 }
