@@ -1,10 +1,10 @@
 const screenWidth = window.innerWidth;
 const menu = document.querySelector('.header__icon-hamburger');
 
-menu.onclick = function() {
+const changeMenuIcon = () => {
     const menu_src = menu.getAttribute('src');
     const menu_mobile = document.querySelector('.header__list');
-
+    
     if (menu_src === 'images/icon-hamburger.svg') {
         menu.setAttribute('src', 'images/icon-close.svg');
         menu_mobile.style.display = 'flex';
@@ -15,3 +15,5 @@ menu.onclick = function() {
         document.body.style.overflow = 'auto';
     }
 };
+
+menu.addEventListener('click', changeMenuIcon);
