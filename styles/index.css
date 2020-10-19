@@ -267,11 +267,11 @@ body {
 
 .footer {
     background-color: var(--neutral-color3);
+    position: relative;
 }
 .container__footer {
     display: flex;
     flex-direction: column;
-    position: relative;
     padding: 100px 20px 60px 20px;
 }
 .footer__bg-pattern-mob {
@@ -455,6 +455,10 @@ body {
     }
     .footer__bg-pattern-desktop {
         display: block;
+    }
+    .footer__header {
+        flex-direction: row;
+        justify-content: space-between;
     }
     .footer__body {
         display: flex;
