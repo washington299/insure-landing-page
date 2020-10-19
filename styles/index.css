@@ -259,6 +259,85 @@ body {
     text-align: center;
     padding: 0 25px;
     color: var(--neutral-color3);
+    z-index: 1;
+}
+.card__button {
+    z-index: 1;
+}
+
+.footer {
+    background-color: var(--neutral-color3);
+}
+.container__footer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 100px 20px 60px 20px;
+}
+.footer__bg-pattern-mob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.footer__bg-pattern-desktop {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.footer__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer__logo {
+    z-index: 1;
+}
+.footer__icons-list {
+    margin: 25px 0;
+    z-index: 1;
+}
+.footer__icon {
+    margin: 0 5px;
+    cursor: pointer;
+}
+.footer__line {
+    width: 100%;
+    height: 1px;
+    background-color: #DDD;
+}
+.footer__link-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+.footer__link-title,
+.footer__link {
+    text-transform: uppercase;
+    font-family: var(--font-family-karla);
+    font-size: 14px;
+}
+.footer__link-title {
+    margin-bottom: 25px;
+    color: var(--neutral-color2);
+}
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.footer__link {
+    margin: 5px 0;
+    color: var(--primary-color1);
+    font-weight: var(--font-bold-weight);
+    cursor: pointer;
+}
+.footer__link:hover {
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 640px) {
